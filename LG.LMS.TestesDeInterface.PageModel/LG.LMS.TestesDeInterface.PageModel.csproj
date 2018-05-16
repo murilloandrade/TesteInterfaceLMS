@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A3B7D47-B7A1-40AF-A14D-CC62CE9502BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LG.LMS.TestesDeInterface.PageModel</RootNamespace>
+    <AssemblyName>LG.LMS.TestesDeInterface.PageModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\Binarios\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=2.51.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WebDriver.Support, Version=2.47.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracao\AdministracaoUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Arquivos\ArquivosEdicaoUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Arquivos\ArquivosInicioUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Arquivos\ArquivosModel.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Artigos\ArtigosEdicaoUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Artigos\ArtigosInicioUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Artigos\ArtigosModel.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Audios\AudiosEdicaoUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Audios\AudiosInicioUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Audios\AudiosModel.cs" />
+    <Compile Include="Administracao\Desenvolvimento\GaleriasDeFotos\GaleriasDeFotosEdicaoUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\GaleriasDeFotos\GaleriasDeFotosInicioUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\GaleriasDeFotos\GaleriasDeFotosModel.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Links\LinksEdicaoUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Links\LinksInicioUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Links\LinksModel.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Videos\VideosEdicaoUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Videos\VideosInicioUI.cs" />
+    <Compile Include="Administracao\Desenvolvimento\Videos\VideosModel.cs" />
+    <Compile Include="Administracao\Plataforma\GestaoItemDeDespesa\GestaoDeDespesaInicioUI.cs" />
+    <Compile Include="Administracao\Plataforma\GestaoItemDeDespesa\GestaoDeDespesaEdicaoUI.cs" />
+    <Compile Include="Administracao\Plataforma\GestaoItemDeDespesa\GestaoDeDespesaModel.cs" />
+    <Compile Include="Escolas\DetalhesDaTrilhaUI.cs" />
+    <Compile Include="Escolas\EscolaUI.cs" />
+    <Compile Include="Escolas\TrilhaUI.cs" />
+    <Compile Include="Institucional\InstitucionalUI.cs" />
+    <Compile Include="Login\LoginUI.cs" />
+    <Compile Include="Portal\PortalUI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LG.LMS.TestesDeInterface.Infraestrutura\LG.LMS.TestesDeInterface.Infraestrutura.csproj">
+      <Project>{263135FC-763B-4B02-8B72-545D10506219}</Project>
+      <Name>LG.LMS.TestesDeInterface.Infraestrutura</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administracao\Avaliacoes\" />
+    <Folder Include="Administracao\Pessoas\" />
+    <Folder Include="Administracao\RH\" />
+    <Folder Include="Administracao\Suporte\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
