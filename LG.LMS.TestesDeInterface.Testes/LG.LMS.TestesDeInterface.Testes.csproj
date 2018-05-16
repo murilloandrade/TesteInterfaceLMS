@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0D82ED6-B93A-48C9-AF84-DB27F5DEFF0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LG.LMS.TestesDeInterface.Testes</RootNamespace>
+    <AssemblyName>LG.LMS.TestesDeInterface.Testes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\Binarios\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\Output\Binarios\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\Output\Binarios\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.51.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WebDriver.Support, Version=2.47.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracao\Desenvolvimento\TestesDeArquivos.cs" />
+    <Compile Include="Administracao\Desenvolvimento\TestesDeArtigos.cs" />
+    <Compile Include="Administracao\Desenvolvimento\TestesDeAudios.cs" />
+    <Compile Include="Administracao\Desenvolvimento\TestesDeGaleriasDeFotos.cs" />
+    <Compile Include="Administracao\Desenvolvimento\TestesDeLinks.cs" />
+    <Compile Include="Administracao\Desenvolvimento\TestesDeVideos.cs" />
+    <Compile Include="Administracao\Plataforma\TestesDeGestaoItemDeDespesa.cs" />
+    <Compile Include="Administracao\TestesDeAdministracao.cs" />
+    <Compile Include="Escolas\TestesDeEscola.cs" />
+    <Compile Include="Escolas\TestesDeTrilhas.cs" />
+    <Compile Include="Institucional\TestesDeInstitucional.cs" />
+    <Compile Include="Login\TestesDeLogin.cs" />
+    <Compile Include="Portal\TestesDePortal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestesDeInterfaceBase.cs" />
+    <Compile Include="ZzzTearDown.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LG.LMS.TestesDeInterface.Infraestrutura\LG.LMS.TestesDeInterface.Infraestrutura.csproj">
+      <Project>{263135FC-763B-4B02-8B72-545D10506219}</Project>
+      <Name>LG.LMS.TestesDeInterface.Infraestrutura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG.LMS.TestesDeInterface.PageModel\LG.LMS.TestesDeInterface.PageModel.csproj">
+      <Project>{5A3B7D47-B7A1-40AF-A14D-CC62CE9502BB}</Project>
+      <Name>LG.LMS.TestesDeInterface.PageModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administracao\Avaliacoes\" />
+    <Folder Include="Administracao\Pessoas\" />
+    <Folder Include="Administracao\RH\" />
+    <Folder Include="Administracao\Suporte\" />
+    <Folder Include="Oficinas\" />
+    <Folder Include="Tutoria\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
